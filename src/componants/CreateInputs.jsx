@@ -53,6 +53,7 @@ const CreateInputs = () => {
           placeholder="student Name"
           className="px-4 py-2 border border-green-300 rounded-lg"
         />
+        
         <input
           required
           type="email"
