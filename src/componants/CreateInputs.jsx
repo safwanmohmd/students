@@ -29,7 +29,7 @@ const CreateInputs = () => {
     };
 
     dispatch(createStudent(newStudent));
-   alert("Product Created Successfully");
+   alert("student created Successfully");
 
     setName('');
     setEmail('');
@@ -48,14 +48,14 @@ const CreateInputs = () => {
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          placeholder="Product Name"
+          placeholder="student Name"
           className="px-4 py-2 border border-green-300 rounded-lg"
         />
         <input
           type="text"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Description"
+          placeholder="email"
           className="px-4 py-2 border border-green-300 rounded-lg"
         />
         <input
@@ -83,7 +83,7 @@ const CreateInputs = () => {
           type="submit"
           className="col-span-full bg-green-500 text-white py-2 rounded-lg font-semibold hover:bg-green-600 transition"
         >
-          Create Product
+          Create student
         </button>
       </form>
     

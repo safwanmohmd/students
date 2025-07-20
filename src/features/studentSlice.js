@@ -7,7 +7,7 @@ const initialState = {
    
 }
 
-export const fetchStudents = createAsyncThunk('products/fetch', async () => {
+export const fetchStudents = createAsyncThunk('students/fetch', async () => {
     const response = await axios.get('https://jsonplaceholder.typicode.com/users');
     console.log(response.data);
     return response.data
