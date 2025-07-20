@@ -15,6 +15,9 @@ const Card = ({ users }) => {
   };
 
   const handleEdit = () => {
+    if (email == '' || phone == '' || website == '' || name == ''){
+      return alert('fill all fields')
+    }
     setEditMode(!editMode);
     dispatch(editStudent({ id: users.id, email, name, phone, website }));
     alert('edit has been saved')
@@ -31,6 +34,7 @@ const Card = ({ users }) => {
                 placeholder="edit name"
                 onInput={(e) => setName(e.target.value)}
                 value={name}
+                required
               />
             </div>
           ) : (
@@ -47,6 +51,7 @@ const Card = ({ users }) => {
                 placeholder="edit email"
                 onInput={(e) => setEmail(e.target.value)}
                 value={email}
+                required
               />
             
           ) : (
@@ -58,6 +63,7 @@ const Card = ({ users }) => {
           {editMode ? (
             
               <input
+              required
                 type="text"
                 className="border-2"
                 placeholder="edit phone"
@@ -74,6 +80,7 @@ const Card = ({ users }) => {
           {editMode ? (
         
               <input
+              required
                 type="text"
                 className="border-2"
                 placeholder="edit website"
